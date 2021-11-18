@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 3 - string and string methods</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lorem, ipsum dolor.</h1>
+        <p id="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dolore quod distinctio pariatur mollitia? Tenetur, fuga, id dignissimos recusandae labore illum accusamus maxime adipisci quis iure, consequatur totam sed tempora ipsum culpa dolorum
+            quibusdam?
+        </p>
+    </div>
+    <script>
+        var string = 'this';
+        var name = 'Utkarsh';
+        var message = 'Utkarsh is Awesome!';
+        var id = '@utkarshcodes';
+        var temp = `${name} is a nice person and he has a twitter and instagram with ${id}`;
+        console.log(string);
+        console.log(temp);
+        var len = name.length;
+        console.log(`length of name is ${len}`);
+        console.log('Hello world \n hey \t tab \\');
+        var y = new String("this");
+        console.log(y);
+        document.getElementById('content').innerHTML = '<h3>this is an H3 heading</h3>'
+    </script>
+</body>
+
+</html>
