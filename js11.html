@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Listening To Browser Events</title>
+</head>
+
+<style>
+    #btn {
+        padding: 5px 10px 5px 10px;
+        background-color: yellow;
+        border: 2px solid black;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <h1>Events!</h1>
+    <ul>
+        <li>click</li>
+        <li>contextmenu</li>
+        <li>mousehover/mouseout</li>
+        <li>mousedown/up</li>
+        <li>mouse move</li>
+        <li>submit</li>
+        <li>focus</li>
+        <li>DomContentLoaded</li>
+    </ul>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quas ducimus blanditiis sed, consequuntur quod fuga incidunt corrupti sint omnis quidem sit quis reiciendis delectus odio, voluptate est at minus eaque sequi. Quisquam facere amet blanditiis,
+        eligendi nesciunt repudiandae laudantium saepe nisi eos. Quae nulla voluptatem dicta dolorem iste asperiores?</p>
+    <button onclick="toggleHide()" id="btn">Show/Hide</button>
+
+    <script>
+        let para = document.getElementById('para')
+        para.addEventListener('mouseover', function run() {
+            alert('Mouse Inside Para')
+        });
+
+        para.addEventListener('mouseout', function run() {
+            alert('Mouse Outside Para')
+        });
+
+        function toggleHide() {
+            let btn = document.getElementById('btn')
+            let para = document.getElementById('para')
+            if (para.style.display != 'none') {
+                para.style.display = 'none'
+            } else {
+                para.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+
+</html>
