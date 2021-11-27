@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON in JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Open Terimnal for <b>JSON</b></h2>
+    </div>
+
+    <script>
+        // Mazedaar hai JSON
+
+        let jsonObj = {
+            name: "Utkarsh",
+            channel: "Utkarsh Codes",
+            Friend: "Amit",
+            Food: "Bhindi",
+        }
+        console.log(jsonObj)
+        let myJsonStr = JSON.stringify(jsonObj)
+        console.log(myJsonStr)
+
+        myJsonStr = myJsonStr.replace("Utkarsh", "Harry")
+        console.log(myJsonStr)
+
+        newJsonObj = JSON.parse(myJsonStr)
+        console.log(newJsonObj)
+    </script>
+</body>
+
+</html>
