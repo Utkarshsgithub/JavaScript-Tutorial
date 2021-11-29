@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position In CSS</title>
+
+    <style>
+        body {
+            background-color: #161623;
+        }
+        
+        .container {
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            height: 3400px;
+        }
+        
+        .box {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.103);
+            border-left: 1px solid rgb(243, 242, 242);
+            border-bottom: 1px solid rgb(243, 242, 242);
+            margin: 10px;
+        }
+        
+        #box3 {
+            position: relative;
+            top: 20px;
+        }
+        
+        #box1 {
+            position: relative;
+            top: 20px;
+        }
+        
+        #box2 {
+            top: 20px;
+            position: sticky;
+        }
+        
+        #box4 {
+            top: 20px;
+            position: sticky;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+</body>
+
+</html>
