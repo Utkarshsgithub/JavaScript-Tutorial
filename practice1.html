@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS | dom manipulation javascript</title>
+    <style>
+        * {
+            font-family: cursive;
+        }
+        
+        body {
+            background: papayawhip;
+        }
+        
+        #myBtn {
+            padding: 10px;
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 40px;
+        }
+        
+        .box {
+            margin-top: 20px;
+            width: 250px;
+            padding: 50px;
+            font-size: 2rem;
+            background: linear-gradient(red, yellow);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 onclick="this.innerHTML='Chicken!'">What is my favourite food?</h1>
+
+    <h1 onclick="changeColor(this)">Change Color</h1>
+
+    <button id="myBtn">Click Me!</button>
+
+    <input type="text" id="words" oninput="removeLetterFromH1()">
+
+    <div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me!</div>
+
+    <script>
+        function changeColor(obj) {
+            obj.style.color = "mediumpurple";
+        }
+
+        document.getElementById("myBtn").onclick = changeBackgroundColorToMediumOrchid;
+
+        function changeBackgroundColorToMediumOrchid() {
+            document.querySelector('body').style.background = "black";
+        }
+
+        function removeLetterFromH1() {
+            var h1 = document.querySelector('h1')
+            h1.textContent = h1.textContent.slice(0, -1);
+        }
+
+        function mOver(obj) {
+            obj.innerHTML = "GET OFF ME!!"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Thank You :)"
+        }
+    </script>
+
+</body>
+
+</html>

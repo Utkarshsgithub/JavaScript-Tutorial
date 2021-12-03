@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Animations</title>
+    <style>
+        body {
+            background: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        window.addEventListener('resizze', update);
+        var x = window.document.getElementById('demo');
+        update();
+
+        function update() {
+            x.innerHTML = "Browser inner window width: " + window.innerWidth + ", height: " + window.innerHeight + ".";
+        };
+
+        var newWindowObj = window.open('http://freecodecamp.com', "newWindow", "mwnubar=true,location=true,resizable=false,scrollbar=false,width=500,height=500,top200,left=200")
+    </script>
+</body>
+
+</html>
